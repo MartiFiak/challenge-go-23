@@ -14,7 +14,7 @@ func PrintComb2() {
 							z01.PrintRune(32)
 							z01.PrintRune(c)
 							z01.PrintRune(d)
-							if a == allDigits[9] && b == allDigits[8] && c == allDigits[9] && d == allDigits[9] {
+							if a == 57 && b == 56 && c == 57 && d == 57 {
 								z01.PrintRune('\n')
 							} else {
 								z01.PrintRune(',')
