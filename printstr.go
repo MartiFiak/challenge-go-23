@@ -1,15 +1,11 @@
 package piscine
 
-import (
-	"os"
-
-	"github.com/01-edu/z01"
-)
+import "github.com/01-edu/z01"
 
 func PrintStr(s string) {
 	hello := "Hello World!"
 	for _, s := range hello {
 		z01.PrintRune(rune(s))
-}
+	}
 	z01.PrintRune('\n')
-}	
+}
