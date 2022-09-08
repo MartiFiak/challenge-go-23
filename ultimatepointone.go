@@ -6,6 +6,4 @@ func UltimatePointOne(n ***int) {
 	*b = 1
 	a = *b
 	**n = &a
-
-	
 }
