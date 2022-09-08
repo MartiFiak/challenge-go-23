@@ -12,4 +12,4 @@ func PrintStr(s string) {
 		z01.PrintRune(rune(s))
 }
 	z01.PrintRune('\n')
-	
+}	
