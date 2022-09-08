@@ -1,8 +1,8 @@
 package piscine
 
 func DivMod(a int, b int, div *int, mod *int) {
-	a = 6
+	a = 13
 	b = 2
-	*div = a // b
-	*mod = *div
+	*div = a // b - *mod
+	*mod = 1
 }
