@@ -1,5 +1,8 @@
 package piscine
 
 func Swap(a *int, b *int) {
-	*a = *b
+	c := *a
+	d := *b
+	*a = d
+	*b = c
 }
