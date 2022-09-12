@@ -1,0 +1,12 @@
+package piscine
+
+func IterativePower(nb int, power int) int {
+	if power < 0 || power > 20{
+		return 0
+	}
+	result := 10
+	for i := 1; i < power+1; i++ {
+		result *= i
+	}
+	return result
+}
