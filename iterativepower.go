@@ -2,7 +2,7 @@ package piscine
 
 func IterativePower(nb int, power int) int {
 	result := 1
-	if power < 0 || nb > 20 {
+	if power < 0 || nb > 70 {
 		return 0
 	}
 	for i := 1; i <= power; i++ {
