@@ -1,22 +1,22 @@
 package piscine
 
 func Index(s string, toFind string) int {
-	a := -1
+	startOccur := -1
 	if len(s) == 0 || len(toFind) == 0 {
 		return 0
 	}
 	for i, c := range []rune(s) {
 		if c == rune(toFind[0]) {
-			a := i
+			startOccur := i
 			for j, v := range []rune(toFind) {
-				if v != rune(s[a+j]) {
-					a = -1
+				if v != rune(s[startOccur+j]) {
+					startOccur = -1
 				}
 			}
-			if a != -1 {
-				return a
+			if startOccur != -1 {
+				return startOccur
 			}
 		}
 	}
-	return a
+	return startOccur
 }
