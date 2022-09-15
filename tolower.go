@@ -1,6 +1,6 @@
 package piscine
 
-func ToLowerer(s string) string {
+func ToLower(s string) string {
 	str := ""
 	srune := []rune(s)
 	for _, st := range srune {
