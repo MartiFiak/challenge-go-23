@@ -23,3 +23,7 @@ func PrintNbrInOrder(n int) {
 		z01.PrintRune(rune(c + 48))
 	}
 }
+
+func SortIntegerTable(allunit []int) {
+	panic("unimplemented")
+}
