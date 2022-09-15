@@ -3,30 +3,27 @@ package piscine
 func Capitalize(s string) string {
 	srune := []rune(s)
 	srune2 := []rune{}
-	for _, st := range srune {
-		if st >= 65 && st <= 90 {
-			srune2 = append(srune2, st+32)
-			//ajout nouvelle case tableau
+	for _, i := range srune {
+		if i >= 65 && i <= 90 {
+			srune2 = append(srune2, i+32)
 		} else {
-			srune2 = append(srune2, st)
-
+			srune2 = append(srune2, i)
 		}
 	}
 	str := ""
-	for o, st := range srune2 {
-		if o == 0 && st >= 97 && st <= 122 {
-			str += string(st - 32)
-			// str = str + string(i - 32)
-		} else if st >= 97 && st <= 122 {
-			if srune2[o-1] >= 48 && srune2[o-1] <= 57 {
-				str += string(st)
-			} else if srune2[o-1] >= 97 && srune2[o-1] <= 122 {
-				str += string(st)
+	for v, i := range srune2 {
+		if v == 0 && i >= 97 && i <= 122 {
+			str += string(i - 32)
+		} else if i >= 97 && i <= 122 {
+			if srune2[v-1] >= 48 && srune2[v-1] <= 57 {
+				str += string(i)
+			} else if srune2[v-1] >= 97 && srune2[v-1] <= 122 {
+				str += string(i)
 			} else {
-				str += string(st - 32)
+				str += string(i - 32)
 			}
 		} else {
-			str += string(st)
+			str += string(i)
 		}
 	}
 	return str
