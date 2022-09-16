@@ -7,6 +7,5 @@ import (
 
 func PrintProgramName() {
 	programName := os.Args[0]
-
 	z01.PrintRune(programName)
 }
