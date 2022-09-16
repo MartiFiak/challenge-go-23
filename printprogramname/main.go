@@ -1,9 +1,9 @@
 package printprogramname
 
 import (
-	"os"
 	"fmt"
 	"github.com/01-edu/z01.PrintRune"
+	"os"
 )
 
 func printprogramname() {
