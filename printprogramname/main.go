@@ -1,4 +1,4 @@
-package PrintProgramName
+package main
 
 import (
 	"os"
@@ -6,8 +6,10 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func PrintProgramName() {
-	pr, _ := os.Executable()
-	z01.PrintRune(" %s\n", pr)
-	z01.PrintRune(" %s\n", os.Args[0])
+func main() {
+	arguments := []rune(os.Args[0])
+	for _, i := range arguments[2;] {
+		z01.PrintRune(i)
+	}
+	z01.PrintRune('\n')
 }
