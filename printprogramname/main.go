@@ -2,10 +2,12 @@ package PrintProgramName
 
 import (
 	"os"
-	"github.com/01-edu/z01.PrintRune"
+
+	"github.com/01-edu/z01"
 )
 
 func PrintProgramName() {
-	programName := os.Args[0]
-	z01.PrintRune(programName)
+	pr, _ := os.Executable()
+	z01.PrintRune(" %s\n", pr)
+	z01.PrintRune(" %s\n", os.Args[0])
 }
