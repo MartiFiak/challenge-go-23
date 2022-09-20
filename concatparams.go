@@ -7,7 +7,7 @@ func ConcatParams(args []string) string {
 		if len(args)-1 != a {
 			str += string("\n")
 		}
-		
+
 	}
 	return str
 }
