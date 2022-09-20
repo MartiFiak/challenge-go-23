@@ -11,7 +11,6 @@ func SplitWhiteSpaces(s string) []string {
 		} else {
 			str += i
 		}
-
 	}
 	return str
 }
