@@ -1,7 +1,5 @@
 package piscine
 
-import ()
-
 func Split(s, sep string) []string {
 	lst := []string{}
 	debut := 0
