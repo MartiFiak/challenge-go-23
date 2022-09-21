@@ -17,3 +17,7 @@ func Split(s, sep string) []string {
 	}
 	return lst
 }
+
+func Index(s, sep string) {
+	panic("unimplemented")
+}
