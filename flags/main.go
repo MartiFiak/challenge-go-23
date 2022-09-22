@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -11,7 +11,7 @@ func main() {
 }
 
 func Insert(strOrigine string, strToAdd string) string {
-	return strOrigine + strToAdd
+	return strOrigine + strToAdd // Problème avec le test go run . "-i=Q 0d 6JI S 4j" "lsJ  FhbrkYGN"
 }
 
 func Order(strToSort string) string {
