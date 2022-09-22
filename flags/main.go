@@ -38,7 +38,6 @@ func Help() {
 	fmt.Println("  -o")
 	fmt.Println("     This flag will behave like a boolean, if it is called it will order the argument.")
 }
-
 func GetFlags(command []string) {
 	if len(command) == 1 {
 		Help()
