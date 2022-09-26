@@ -17,7 +17,6 @@ func main() {
 		fmt.Println("File name missing")
 		return
 	}
-	_, err := ioutil.ReadFile(FileName)
 
 	if err != nil {
 		fmt.Println("Almost there!!")
