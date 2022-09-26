@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
+	"io/ioutil"
 )
 
-func main() {
+func main () {
 	FileName := "quest8.txt"
 
 	if len(os.Args) > 2 {
@@ -16,11 +16,12 @@ func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("File name missing")
 		return
-	}
+	} 
+	data, err := ioutil.ReadFile(FileName)
 
 	if err != nil {
 		fmt.Println("Almost there!!")
 		return
 	}
-	fmt.Println("Almost there!!")
+	fmt.Println(data)
 }
