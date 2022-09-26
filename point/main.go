@@ -1,27 +1,28 @@
 package main
 
-import "github.com/01-edu/z01"
+import (
+    "github.com/01-edu/z01"
+)
 
-func main() {
-	p := "x = " + IntegerToString(42) + ", y = " + IntegerToString(21) + "\n"
-	for _, c := range p {
-		z01.PrintRune(c)
-	}
+type point struct {
+    x int
+    y int
 }
 
-func IntegerToString(nbr int) string {
-	snbr := ""
-	var allunit []int
-	if nbr == 0 {
-		return "0"
-	} else {
-		for nbr > 0 {
-			allunit = append(allunit, nbr%10)
-			nbr = nbr / 10
-		}
-	}
-	for c := len(allunit) - 1; c >= 0; c-- {
-		snbr += string(rune(allunit[c] + 48))
-	}
-	return snbr
+func setPoint(ptr *point) {
+    ptr.x = 42
+    ptr.y = 21
+}
+
+func printStr(s string) {
+    for _, r := range s {
+        z01.PrintRune(r)
+    }
+    z01.PrintRune('\n')
+}
+
+func main() {
+    points := &point{}
+    setPoint(points)
+    printStr(`x = ` + "42" + `, y = ` + "21")
 }
