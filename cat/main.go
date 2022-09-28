@@ -1,20 +1,41 @@
 package main
 
 import (
-	"os"
+	"github.com/01-edu/z01"
 	"io/ioutil"
-	"fmt"
+	"os"
 )
 
-func readFromFille(f string) {	
-	// read the whole content of file and pass it to file variable, in case of error pass it to err variable
-	file, err := os.Open(f)
-	if err != nil {
-	   fmt.Printf("ERROR: open %s: no such file or directory \n", os.Args[1])
-	   os.Exit(1)
+func main() {
+	if len(os.Args) == 1 {
+		aze, _ := ioutil.ReadAll(os.Stdin)
+		ok(string(aze))
 	}
-	// convert the file binary into a string using string
-	fileContent := string(file)
-	// print file content
-	fmt.Println(fileContent)
- }
+	tab := []string(os.Args[1:])
+	if len(os.Args) > 1 {
+		data, err := ioutil.ReadFile(os.Args[1])
+		if err != nil {
+			ok(string("ERROR: " + err.Error()))
+			z01.PrintRune(('\n'))
+			os.Exit(1)
+			ok(string(data))
+		} else {
+			for _, j := range tab {
+				data1, err := ioutil.ReadFile(j)
+				if err != nil {
+					ok(`ERROR: ` + err.Error())
+					z01.PrintRune(('\n'))
+					os.Exit(1)
+				} else {
+					ok(string(data1))
+				}
+			}
+		}
+	}
+}
+
+func ok(s string) {
+	for _, r := range s {
+		z01.PrintRune(r)
+	}
+}
